@@ -1,0 +1,11 @@
+
+
+notebook:
+  rootpath: '/home/aerolinux3/clouds_and_repos/git/pypsa-spain/'
+  prefix: 'Voronoi_only_where_loads'
+  name: 'false'
+
+
+map:
+  boundaries: [-14, 6.35, 35, 46.3]
+
