@@ -1,0 +1,11 @@
+
+
+notebook:
+  rootpath: ''   # Absolute path to pypsaX folder
+  prefix: ''   # 'prefix' used in pypsaX config.yaml file
+  name: ''   # 'name' used in pypsaX config.yaml file
+
+
+map:
+  boundaries: [-14, 6.35, 35, 46.3]
+
