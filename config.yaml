@@ -2,10 +2,11 @@
 
 notebook:
   rootpath: '/home/aerolinux3/clouds_and_repos/git/pypsa-spain/'
-  prefix: 'Voronoi_only_where_loads'
-  name: 'false'
+  prefix: 'customise_electricity_demand'
+  name: 'true'
 
 
 map:
-  boundaries: [-14, 6.35, 35, 46.3]
+  boundaries_onshore: [-14, 6.35, 35, 46.3]
+  boundaries_offshore: [-14, 6.35, 35, 46.3]
 

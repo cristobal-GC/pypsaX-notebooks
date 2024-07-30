@@ -5,7 +5,8 @@ import pandas as pd
 
 def fun_map_capacity_Voronoi(carrier, token_density, n, ax):
     """
-    This function plots the installed capacity of a generator carrier in Voronoi cells
+    This function plots the installed capacity (or spatial density)
+    of a generator carrier in Voronoi cells
     """
 
     ##### Get df with capacity
