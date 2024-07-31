@@ -4,7 +4,7 @@ import cartopy
 
 
 
-def fun_map_network_shapes(n, ax, domain='both'):
+def fun_map_network_geometry(n, ax, domain='both'):
     """
     This function adds geo information from n.shapes in axes 'ax'
 
