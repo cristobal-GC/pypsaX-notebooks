@@ -1,13 +1,12 @@
 
 
-
 import pandas as pd
-#import geopandas as gpd
 
 
-def fun_gdf_network_capacity(carrier, n):
+
+def fun_gdf_network_generators(carrier, n):
     """
-    This function provides a gdf of a network with some generation capacity features 
+    This function provides a gdf of a network with some generation features 
     for a specific carrier.
 
     Columns:
@@ -24,7 +23,7 @@ def fun_gdf_network_capacity(carrier, n):
     The gdf is provided in Plate Carrée crs('4036')    
     """
 
-    ##### Get df with capacity
+    ##### Get df with generators info
     gg = n.generators
     # filter carrier
     df = gg[gg['carrier']==carrier]
@@ -48,21 +47,21 @@ def fun_gdf_network_capacity(carrier, n):
 
  
     ##### Merge df and gdf
-    gdf_network_capacity =  pd.merge(gdf,df, on='bus')
+    gdf_network_generators =  pd.merge(gdf,df, on='bus')
 
     ##### Add p_nom_density 
-    gdf_network_capacity['p_nom_density'] = gdf_network_capacity['p_nom'] / gdf_network_capacity['area']
+    gdf_network_generators['p_nom_density'] = gdf_network_generators['p_nom'] / gdf_network_generators['area']
 
     ##### Add p_nom_max_density
-    gdf_network_capacity['p_nom_max_density'] = gdf_network_capacity['p_nom_max'] / gdf_network_capacity['area']
+    gdf_network_generators['p_nom_max_density'] = gdf_network_generators['p_nom_max'] / gdf_network_generators['area']
 
     ##### Add p_nom_max_ratio
-    gdf_network_capacity['p_nom_max_ratio'] = gdf_network_capacity['p_nom'] / gdf_network_capacity['p_nom_max']
+    gdf_network_generators['p_nom_max_ratio'] = gdf_network_generators['p_nom'] / gdf_network_generators['p_nom_max']
 
 
 
 
-    return gdf_network_capacity
+    return gdf_network_generators
 
 
 
